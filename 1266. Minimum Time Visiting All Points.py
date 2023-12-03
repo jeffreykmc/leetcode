@@ -1,4 +1,6 @@
 #1266. Minimum Time Visiting All Points
+#
+#https://leetcode.com/problems/minimum-time-visiting-all-points/?envType=daily-question&envId=2023-12-03
 
 
 class Solution:
@@ -16,7 +18,6 @@ class Solution:
                     dist+=abs(thisX-pastX)
                 else:
                     dist+=abs(thisY-pastY)
-                #print(dist)
                 pastX=thisX
                 pastY=thisY
             x=1
