@@ -1,8 +1,3 @@
-#1266. Minimum Time Visiting All Points
-#
-#https://leetcode.com/problems/minimum-time-visiting-all-points/?envType=daily-question&envId=2023-12-03
-
-
 class Solution:
     def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:
         x=0
@@ -14,10 +9,12 @@ class Solution:
                 pastX,pastY=p
             else:
                 thisX,thisY=p
+                #can try dist+=max(abs(thisX-pastX),abs(thisY-pastY))
                 if abs(thisX-pastX) > abs(thisY-pastY):
                     dist+=abs(thisX-pastX)
                 else:
                     dist+=abs(thisY-pastY)
+                #print(dist)
                 pastX=thisX
                 pastY=thisY
             x=1
