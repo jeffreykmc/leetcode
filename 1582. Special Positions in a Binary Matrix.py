@@ -5,16 +5,18 @@ class Solution:
     def numSpecial(self, mat: List[List[int]]) -> int:
         dmat=mat
         totalcount=0
-        for i in range(len(mat)):
-            for j in range(len(mat[0])):
-                if mat[i][j]==1:
+        for i in range(len(mat[0])):
+            for j in range(len(mat)):
+                if mat[j][i]==1:
                     sumx=0
                     sumy=0
+                    
                     for x in range(len(mat)):
-                        sumx+=mat[i][x]
+                        sumx+=mat[x][i]
                     for y in range(len(mat[0])):
-                        sumy+=mat[y][j]
+                        sumy+=mat[j][y]
                     if sumx==1 and sumy==1:
                         totalcount+=1
         return totalcount
+
 
