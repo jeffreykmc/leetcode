@@ -27,6 +27,9 @@ class Solution:
                 tdict[i]+=1
             except:
                 tdict[i]=1
+        l=""
+        for i in s:
+            l+=i
         for i in s:
             try:
                 if sdict[i]==tdict[i]:
