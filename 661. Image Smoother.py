@@ -11,6 +11,9 @@ class Solution:
             for i in range(w):
                 a=0
                 count=0
+                #https://leetcode.com/problems/image-smoother/solutions/4423065/96-31-easy-solution-with-explanation/?envType=daily-question&envId=2023-12-19
+                #for x in range(max(0, i-1), min(rows, i+2)):
+                #for y in range(max(0, j-1), min(cols, j+2)):
                 for k in range(-1,2):
                     for l in range(-1,2):
                         if j+k>=0 and j+k<h and i+l>=0 and i+l<w: 
