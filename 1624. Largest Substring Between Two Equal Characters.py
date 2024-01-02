@@ -30,3 +30,20 @@ class Solution:
             return -1    
         return totalMax
 
+
+#array method
+class Solution:
+    def maxLengthBetweenEqualCharacters(self, s: str) -> int:
+        aW=([-1] *26)
+        mW=([-1] *26)
+        cW=len(s)
+        if cW==1:
+            return -1
+        if cW==2:
+            return 0
+        for i in range(cW):
+            if aW[ord(s[i])-ord('a')]==-1:
+                aW[ord(s[i])-ord('a')]=i
+            else:
+                mW[ord(s[i])-ord('a')]=i-aW[ord(s[i])-ord('a')]-1
+        return max(mW)
